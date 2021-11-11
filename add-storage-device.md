@@ -116,26 +116,3 @@ $echo -e "`lsblk /dev/sdb1 -n -P -o UUID | tr -d '"'`\t/mnt/hdd1\text4\tdefaults
 UUID=0cf8b7d8-b987-4e4b-9690-7cf82070323f /mnt/hdd1 ext4 defaults 0 2
 
 tips: lsblk, lvs, vgs, blkid
-Share this:
-
-    Press ThisTwitterFacebook
-
-Customize buttons
-Edit	
-Content
-
-    Adding a physical disk in Linux
-    Before PKCS
-    Docker on Ubuntu 18.04
-    DRTFM
-    Linux containers with LXD
-    MODBUS
-    Network Inspection
-    Securely binding low ports on linux
-    Self-signed certificate with OpenSSL
-    SoftHSM2 on Ubuntu 18.04
-    Ubuntu package management
-    Virtual Machines on Ubuntu
-    Yubikey 5 in Ubuntu 18.04
-
-Website Powered by WordPress.com.
