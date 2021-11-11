@@ -1,9 +1,8 @@
-
-HomeAdding a physical disk in Linux
-Adding a physical disk in Linux
+#Add a storage device
 
 This is a step-by-step example on how to install a new disk on Linux. The example is verified on Ubuntu, but should work on most variants of Linux.
-Step 1 – Identify disk
+
+##Step 1 – Identify disk
 
 Start by listing all the physically installed disks by executing the list hardware command (lshw) and filtering out only hardware classes of the type disk.
 
@@ -33,7 +32,8 @@ $ sudo lshw -c disk
        configuration: ansiversion=5 logicalsectorsize=512 sectorsize=4096
 
 In this example, the physical Western Digital disk i have installed on the computer has been given the logical name /dev/sdb by Linux.
-Step 2 – Create disk partition
+
+##Step 2 – Create disk partition
 
     WARNING: Before you proceed, make sure that you have identified the correct logical name, and substitute (if needed) the logical name /dev/sdb with the volume you are about to install.
 
@@ -64,7 +64,7 @@ The partition table has been altered.
 Calling ioctl() to re-read partition table.
 Syncing disks.
 
-Step 3 – Create file system
+##Step 3 – Create file system
 
 You must now make the file system (mkfs)of the type you prefer, e.g. ext4 on the newly created logical volume /dev/sdb1. It is perfectly normal for a HDD to sound like a purring cat at this stage.
 
@@ -82,7 +82,7 @@ Writing inode tables: done
 Creating journal (32768 blocks): done
 Writing superblocks and filesystem accounting information: done
 
-Step 4 – Mount disk by name
+##Step 4 – Mount disk by name
 
 Make a directory (mkdir) named /mnt/hdd1 as a mount point for your new disk.
 
@@ -108,7 +108,7 @@ Finally, you can mount all drives in the newly updated file systems table in ord
 
 sudo mount -a
 
-Step 4 alternative – Mount disk by UUID
+##Step 4 alternative – Mount disk by UUID
 
 Follow the previous steps 1 to 3, then run:
 
